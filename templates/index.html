@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -14,10 +15,15 @@
             <input type="text" id="data" name="data" required>
             <button type="submit">Generate QR Code</button>
         </form>
+
+        <!-- New Button Link -->
+        <button onclick="window.location.href='https://www.agigui.com';">Go visit AgiGui.com</button>
+
         {% if img_path %}
             <h2>Your QR Code:</h2>
             <img src="{{ img_path }}" alt="QR Code">
         {% endif %}
+
     </div>
 </body>
 </html>
